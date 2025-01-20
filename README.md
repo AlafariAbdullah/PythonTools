@@ -6,7 +6,8 @@ This repository is both a personal archive of my tools and a resource for others
 ---
 
 ### Current List of Tools:
-- 
+- **[KML Tag Extractor](KML_Related_Tools/extract_kml_tags_to_text.py**: Extracts specific tags (like `name` or `coordinates`) from `.kml` files and saves the output as plain text. Useful for summarizing or analyzing geographic data from a given database.
+
 
 ---
 
@@ -25,4 +26,4 @@ Most tools in this repository were originally developed for specific purposes an
 Feel free to check out the scripts and let me know if you have any suggestions or improvements.
 
 **Connect with me:**  
-[LinkedIn Profile](https://www.linkedin.com/in/abdullahalafari)
+[LinkedIn Profile](www.linkedin.com/in/alafari-abdullah)
