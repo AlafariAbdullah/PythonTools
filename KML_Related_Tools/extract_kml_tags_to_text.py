@@ -7,8 +7,9 @@
 # may or may not be disclosed, depending on the specific context and the permission
 # of any associated individuals or entities.
 
-
-# Any explanation in any document is based on my own understanding and could be modified
+# Disclaimer:
+# - All explanations and notes are based on personal understanding and are subject to improvement.
+# - The author is not responsible for any misuse or data loss resulting from the use of this script.
 
 
 # Done Adding notes and generalizing the code for the Github upload 21/Jan/2025
@@ -26,7 +27,6 @@
 # Warnings:
 # - The output file will overwrite any existing file at the specified path.
 # - Test the script with a small .kml file to verify the output before processing large datasets.
-# - The author is not responsible for any misuse or damage to datasets.
 
 # Mock data .kml :   tag_name = "name"
 
