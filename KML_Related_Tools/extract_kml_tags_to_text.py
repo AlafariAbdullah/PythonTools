@@ -14,22 +14,27 @@
 
 # Done Adding notes and generalizing the code for the Github upload 21/Jan/2025
 
-# Prerequisites should check!!!!
+# Prerequisites:
+# - Ensure the `.kml` file has proper XML structure and uses namespaced tags.
+# - File permissions:
+#   - Read access to the `.kml` file.
+#   - Write access to the directory specified in `output_path`.
+# - XML structure:
+#   - The `.kml` file must include the specified `tag_name`. 
+#   - Tags must be correctly nested as specified in queries (e.g., `"Placemark/kml:coordinates"`).
 
-#--___---___---___---___---___---___---___---___---___---___---___---___---___---___---___---___---
+# --- Script Overview ---
+# This script extracts the text of specified XML tags from a `.kml` file and saves the output as plain text.
+# - `.kml` files are XML-based and store geographic data for use in mapping applications (e.g., Google Earth).
+# - The script can extract specific tags (e.g., "name" or "coordinates") for summaries, reports, or further analysis.
+# - Assumes the `.kml` file adheres to standard formats with correctly structured tags.
 
-# This script extracts the text of specified XML tags and saves them as plain text
-# .kml files are XML-based and store geographic data for use in mapping applications (e.g., Google Earth)
-# The script extracts specified tags (like coordinates or names) for summaries, reports, or further analysis
+# --- Warnings ---
+# - The output file will overwrite any existing file at the specified path with the same name.
+# - Test the script with a small `.kml` file to verify the output before processing large datasets.
 
-# this script assumes the .kml file adheres to standard formats with correctly structured tags
-
-# Warnings:
-# - The output file will overwrite any existing file at the specified path.
-# - Test the script with a small .kml file to verify the output before processing large datasets.
-
-# Mock data .kml :   tag_name = "name"
-
+# --- Mock Data (.kml) ---
+# Input file example (tag_name = "name"): 
 # <?xml version='1.0' encoding='utf-8'?>
 # <kml xmlns="http://www.opengis.net/kml/2.2"><Document><Placemark><name>Al Murooj (المروج)</name><description>Route Color: #00ade5
 # Hub: No
@@ -38,7 +43,7 @@
 # Hub: No
 # Park &amp; Ride: No
 
-# Output :
+# Example Output (.txt):
 # Al Murooj (المروج)
 # King Fahad District (حي الملك فهد)
 
@@ -127,6 +132,3 @@ if not os.path.isdir(os.path.dirname(output_path)):
 print(f"Successfully saved all '{tag_name}' tags to '{output_path}'.")
 if number_of_no_namespaces_found > 0:
     print(f"Warning: {number_of_no_namespaces_found} tags were missing or empty.")
-
-
-
